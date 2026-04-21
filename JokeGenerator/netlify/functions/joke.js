@@ -1,42 +1,37 @@
-export default async (req) => {
+exports.handler = async (event) => {
   try {
-    if (req.method !== "POST") {
-      return new Response(
-        JSON.stringify({ error: "Method Not Allowed" }),
-        {
-          status: 405,
-          headers: { "Content-Type": "application/json" }
-        }
-      );
+    if (event.httpMethod !== "POST") {
+      return {
+        statusCode: 405,
+        body: JSON.stringify({ error: "Method Not Allowed" }),
+      };
     }
 
-    const requestBody = await req.json();
+    const requestBody = JSON.parse(event.body || "{}");
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+        "Authorization": "Bearer " + process.env.OPENAI_API_KEY,
       },
-      body: JSON.stringify(requestBody)
+      body: JSON.stringify(requestBody),
     });
 
     const data = await response.json();
 
-    return new Response(JSON.stringify(data), {
-      status: response.status,
-      headers: { "Content-Type": "application/json" }
-    });
+    return {
+      statusCode: response.status,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    };
   } catch (error) {
-    return new Response(
-      JSON.stringify({
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
         error: "Server request failed",
-        details: error.message
+        details: error.message,
       }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" }
-      }
-    );
+    };
   }
 };
