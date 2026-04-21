@@ -1,0 +1,1604 @@
+@font-face {
+    font-family: 'KBJellybean';
+    src: url('fonts/Kbjellybean.eot');
+    src: url('fonts/Kbjellybean.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Kbjellybean.woff2') format('woff2'),
+         url('fonts/Kbjellybean.woff') format('woff'),
+         url('fonts/Kbjellybean.ttf')  format('truetype'),
+         url('fonts/Kbjellybean.svg#KBJellybean') format('svg');
+}
+
+/* Import Google Font - Shared Across Pages */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+/* ========================================== */
+/* 🚀 JOKES PAGE – Fully Independent Section */
+/* ========================================== */
+body[data-page="jokes"] {
+    font-family: "Georgia", sans-serif;
+    text-align: center;
+    color: #333333;
+    background-color: #f3f3f3;
+}
+
+body[data-page="jokes"] #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Restored proper centering */
+    padding: 5px 10px;
+    background: linear-gradient(to left, #87CEEB, #70A1FF);
+    color: white;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+body[data-page="jokes"] #navbar h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    letter-spacing: 0.40rem;
+    text-align: center;
+}
+
+body[data-page="jokes"] #nav-links {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+}
+
+body[data-page="jokes"] .tab-button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none !important;
+}
+
+body[data-page="jokes"] h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff5733, #ffbd33, #33ff57, #3380ff, #ff33a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 60px;
+    padding-bottom: 30px;
+    letter-spacing: 0.40rem;
+}
+
+body[data-page="jokes"] section {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the contents horizontally */
+    margin-bottom: 20px;
+    max-width: 100%;
+    padding: 0 20px;
+    font-family: 'KBJellybean', sans-serif !important;
+}
+
+
+body[data-page="jokes"] #joke-display {
+    min-height: 80px; 
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+    color: #2c3e80;
+    line-height: 1.4;
+    white-space: normal;
+    margin: 5px 0;
+    font-family: "Comic Sans MS", "Comic Neue", "Trebuchet MS", "Arial", sans-serif;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+body[data-page="jokes"] #controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+body[data-page="jokes"] #button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 350px;
+    padding-bottom: 25px;
+    margin: 10px auto 0 auto;
+}
+
+body[data-page="jokes"] #dropdown-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end; 
+    width: 350px;
+    margin: 10px auto;
+   padding-bottom: 25px;
+    gap: 10px;
+   
+}
+
+#button-dropdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 350px;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+body[data-page="jokes"] #category-label {
+    font-size: 18px;
+    font-weight: bold;
+   margin-bottom: 0;
+   font-family: "Comic Sans MS", "Comic Neue", "Trebuchet MS", "Arial", sans-serif;
+    color: #2c3e80;
+    text-align: center;
+}
+
+body[data-page="jokes"] #joke-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; 
+   width: 350px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #999;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #ffffff, #d0d0d0);
+    color: #124972;
+    cursor: pointer;
+    font-family: 'kbjellybean', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    white-space: normal;
+    text-indent: 0;
+}
+
+body[data-page="jokes"] #nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+body[data-page="jokes"] button {
+    font-family: 'kbjellybean', sans-serif;
+    font-weight: bold;
+    border: 2px solid #999;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #ffffff, #d0d0d0);
+    color: #124972;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    letter-spacing: 0.15rem;
+}
+
+body[data-page="jokes"] #joke-button {
+    font-size: 22px;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    width: 350px;
+    max-width: 100%;
+   margin-right: 0;
+   margin-left: 0;
+  position: static;
+  padding-left: 0;
+  padding-right: 0;
+   
+}
+
+body[data-page="jokes"] #previous-joke-button, 
+body[data-page="jokes"] #next-joke-button {
+    font-size: 18px;
+    padding: 5px 15px;
+    width: 260px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #124972;
+    font-weight: bold;
+}
+
+body[data-page="jokes"] .arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+body[data-page="jokes"] button:hover {
+    background: linear-gradient(to bottom, #d0d0d0, #a0a0a0);
+}
+
+body[data-page="jokes"] button:active {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #a0a0a0, #808080);
+}
+
+body[data-page="jokes"] .joke-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body[data-page="jokes"] .joke-line {
+    margin: 5px 0;
+    line-height: 1.4;
+    text-align: center;
+}  
+
+/* === JOKE GENERATOR HOW TO USE INSTRUCTIONS === */
+body[data-page="jokes"] #how-to-use-container {
+    max-width: 60%;
+    margin: 0px auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background: #f6f9fa;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    padding-bottom: 50px;
+    color: #2c3e80;
+}
+
+body[data-page="jokes"] #how-to-use-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e80;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+body[data-page="jokes"] #how-to-use-line {
+    width: 100%;
+    height: 1px;
+    background-color: #2c3e80;
+    margin-bottom: 15px;
+}
+
+body[data-page="jokes"] #how-to-use-list {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    list-style: none;
+    color: #2c3e80;
+    padding-top: 10px;
+}
+
+body[data-page="jokes"] #how-to-use-list li {
+    margin-bottom: 10px;
+}
+
+#how-to-use-container h3 {
+    font-size: 1.5em;
+    color: #2c3e80;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#how-to-use-container p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #2c3e80;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#how-to-use-container ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#how-to-use-container ul li {
+    font-size: 1.1em;
+    line-height: 1.5;
+    padding-left: 15px;
+  text-align: center;
+}
+
+#how-to-use-container ul li::before {
+    content: "";
+    color: #2c3e80;
+    font-weight: bold;
+    margin-right: 8px;
+    text-align: center;
+}
+
+/* ========================================== */
+/* 🤓 TRIVIA PAGE – Fully Independent Section */
+/* ========================================== */
+body[data-page="trivia"] {
+    font-family: "Georgia", sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #2c3e80;
+}
+
+body[data-page="trivia"] h1 {
+    letter-spacing: 0.30rem; /* Adjust the value as needed */
+    font-family: "Georgia", sans-serif;
+    color: #2c3e80;
+    font-size: 45px;
+}
+
+body[data-page="trivia"] #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Restored proper centering */
+    padding: 5px 10px;
+    background: linear-gradient(to right, #003366, #0055aa);
+    color: white;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+body[data-page="trivia"] section {margin-top: 200px }
+
+body[data-page="trivia"] #navbar h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    letter-spacing: 0.40rem;
+}
+
+body[data-page="trivia"] #nav-links {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+}
+
+body[data-page="trivia"] .tab-button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none !important;
+}
+
+body[data-page="trivia"] #trivia-display {
+    min-height: 80px; 
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+    color: #2c3e80;
+    line-height: 1.4;
+    white-space: normal;
+    margin: 5px 0;
+    font-family: 'Georgia', sans-serif;
+    margin-top: 50px;
+}
+
+body[data-page="trivia"] #controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+body[data-page="trivia"] #button-container {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+body[data-page="trivia"] #answer-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+body[data-page="trivia"] #trivia-nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+body[data-page="trivia"] button {
+    font-family: "Georgia", sans-serif;
+    font-weight: normal;
+    border: 2px solid #999;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #ffffff, #d0d0d0);
+    color: #333333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 50px;
+    
+}
+
+body[data-page="trivia"] #trivia-button {
+    font-size: clamp(22px, 3vw, 25px);
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    width: 350px;
+}
+
+body[data-page="trivia"] #prev-trivia, 
+body[data-page="trivia"] #next-trivia {
+    font-size: 18px;
+    padding: 5px 15px;
+    width: 250px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #333333;
+}
+
+body[data-page="trivia"] .arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+body[data-page="trivia"] button:hover {
+    background: linear-gradient(to bottom, #d0d0d0, #a0a0a0);
+}
+
+body[data-page="trivia"] button:active {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #a0a0a0, #808080);
+}
+/* Remove list styling for trivia questions */
+#trivia-display ul, #trivia-display ul li {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+/* === HOW TO USE INSTRUCTIONS - TRIVIA === */
+body[data-page="trivia"] #how-to-use-container {
+    max-width: 60%;
+    margin: 0px auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background: #f6f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body[data-page="trivia"] #how-to-use-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e80;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+body[data-page="trivia"] #how-to-use-line {
+    width: 100%;
+    height: 1.0px;
+    background-color: #2c3e80;
+    margin-bottom: 15px;
+}
+
+body[data-page="trivia"] #how-to-use-list {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 10px;
+    list-style: none;
+    color: #2c3e80;
+}
+
+body[data-page="trivia"] #how-to-use-list li {
+    margin-bottom: 10px;
+}
+body[data-page="trivia"] #how-to-use-container h3 {
+    font-size: 1.5em;
+    color: #2c3e80;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+
+body[data-page="trivia"] #how-to-use-container p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #2c3e80;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+body[data-page="trivia"] #how-to-use-container ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+body[data-page="trivia"] #how-to-use-container ul li {
+    font-size: 1.1em;
+    line-height: 1.5;
+    padding-left: 15px;
+  text-align: center;
+}
+
+body[data-page="trivia"] #how-to-use-container ul li::before {
+    content: "";
+    color: #2c3e80;
+    font-weight: bold;
+    margin-right: 8px;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+  }
+
+/* ========================================== */
+/* 🌍 FUN FACTS PAGE – Fully Independent Section */
+/* ========================================== */
+body[data-page="fun-facts"] {
+    font-family: "Georgia", sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #884343;
+    
+}
+body[data-page="fun-facts"] h1 {
+    letter-spacing: 0.30rem; 
+    font-family: "Georgia", sans-serif;
+    color: #884343;
+    font-size: 45px;
+    
+}
+
+body[data-page="fun-facts"] #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 5px 10px;
+    background: linear-gradient(to left, #FFA500, #FF6347);
+    color: white;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+body[data-page="fun-facts"] section {margin-top: 200px }
+
+body[data-page="fun-facts"] #navbar h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    letter-spacing: 0.40rem;
+}
+
+body[data-page="fun-facts"] #nav-links {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+}
+
+body[data-page="fun-facts"] .tab-button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none !important;
+}
+
+body[data-page="fun-facts"] #fun-facts-display {
+    min-height: 80px; 
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+    color: #884343;
+    line-height: 1.4;
+    white-space: normal;
+    margin: 5px 0;
+    font-family: 'Georgia', sans-serif;
+    margin-top: 50px;
+}
+
+body[data-page="fun-facts"] #controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+body[data-page="fun-facts"] #button-container {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+body[data-page="fun-facts"] #fun-facts-nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+body[data-page="fun-facts"] button {
+    font-family: "Georgia", sans-serif;
+    font-weight: normal;
+    border: 2px solid #999;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #ffffff, #d0d0d0);
+    color: #333333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+body[data-page="fun-facts"] #fun-facts-button {
+    font-size: clamp(22px, 3vw, 25px);
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    width: 350px;
+}
+
+body[data-page="fun-facts"] #prev-fun-facts, 
+body[data-page="fun-facts"] #next-fun-facts {
+    font-size: 18px;
+    padding: 5px 15px;
+    width: 250px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #333333;
+}
+
+body[data-page="fun-facts"] .arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+body[data-page="fun-facts"] button:hover {
+    background: linear-gradient(to bottom, #d0d0d0, #a0a0a0);
+}
+
+body[data-page="fun-facts"] button:active {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #a0a0a0, #808080);
+}
+
+/* === HOW TO USE INSTRUCTIONS - FUN FACTS === */
+body[data-page="fun-facts"] #how-to-use-container {
+    max-width: 60%;
+    margin: 0px auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background: #f6f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body[data-page="fun-facts"] #how-to-use-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #884343;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+body[data-page="fun-facts"] #how-to-use-line {
+    width: 100%;
+    height: 1.0px;
+    background-color: #884343;
+    margin-bottom: 15px;
+}
+
+body[data-page="fun-facts"] #how-to-use-list {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    list-style: none;
+    color: #884343;
+    padding-top: 10px;
+}
+
+body[data-page="fun-facts"] #how-to-use-container h3 {
+    font-size: 1.5em;
+    color: #884343;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+
+body[data-page="fun-facts"] #how-to-use-container p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #884343;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+body[data-page="fun-facts"] #how-to-use-container ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+body[data-page="fun-facts"] #how-to-use-container ul li {
+    font-size: 1.1em;
+    line-height: 1.5;
+    padding-left: 15px;
+  text-align: center;
+}
+body[data-page="fun-facts"] #how-to-use-container ul li::before {
+    color: #884343;
+    font-weight: bold;
+    margin-right: 8px;
+    text-align: center;
+    content: "";
+}
+
+body[data-page="fun-facts"] #how-to-use-list li {
+    margin-bottom: 10px;
+}
+/* ========================================== */
+/* 🌍         FOOTER Section */
+/* ========================================== */
+body[data-page="jokes"] footer,
+body[data-page="trivia"] footer,
+body[data-page="fun-facts"] footer,
+body[data-page="contact"] footer,
+body[data-page="terms"] footer,
+body[data-page="faq"] footer,
+body[data-page="privacy"] footer {
+    width: 100%;
+    position: relative;
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    gap: 10px;
+}
+
+body[data-page="faq"] html, body,
+body[data-page="contact"] html, body,
+body[data-page="jokes"] html, body,
+body[data-page="trivia"] html, body,
+body[data-page="fun-facts"] html, body,
+body[data-page="terms"] html, body,
+body[data-page="privacy"] html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+   
+    flex-direction: column;
+}
+
+footer p {
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Hide inactive sections */
+.hidden {
+    display: none;
+}
+
+/* Different Footer Colors Per Page */
+body[data-page="jokes"] footer {
+    background: linear-gradient(to right, #87CEEB, #70A1FF); /* Light Blue */
+}
+
+body[data-page="trivia"] footer {
+    background: linear-gradient(to left, #003366, #0055aa); /* Dark Blue */
+}
+
+body[data-page="fun-facts"] footer {
+    background: linear-gradient(to right, #FFA500, #FF6347); /* Orange-Red */
+}
+
+
+
+/* ========================================== */
+/* 🌍         CONTACT PAGE
+/* ========================================== */
+
+body[data-page="contact"] {
+    font-family: "Georgia", sans-serif;
+    text-align: center;
+    color: #333333;
+    background-color: #f4f4f4;
+}
+
+/* NAVIGATION BAR */
+body[data-page="contact"] #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Restored proper centering */
+    padding: 5px 10px;
+    background: linear-gradient(to right, #003366, #0055aa);
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+body[data-page="contact"] footer {
+    background: linear-gradient(to left, #003366, #0055aa);
+}
+
+body[data-page="contact"] #navbar h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    letter-spacing: 0.40rem;
+}
+
+body[data-page="contact"] #nav-links {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+}
+
+body[data-page="contact"] .tab-button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none !important;
+}
+
+/* CONTACT TITLE */
+body[data-page="contact"] .contact-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e80;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* CONTACT FORM CONTAINER */
+body[data-page="contact"] #contact-container {
+    max-width: 1000px;
+    margin: 260px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* FORM LABELS - Stacked Above Inputs */
+body[data-page="contact"] #contact-container label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* FORM INPUT FIELDS */
+body[data-page="contact"] #contact-container input,
+body[data-page="contact"] #contact-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Prevents width overflow */
+}
+
+/* TEXTAREA SIZE */
+body[data-page="contact"] #contact-container textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* SUBMIT BUTTON */
+body[data-page="contact"] #contact-container button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to bottom, #6ab7ff, #0077cc);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+   margin-top: 25px;
+}
+
+/* HOVER EFFECT */
+body[data-page="contact"] #contact-container button:hover {
+    background: linear-gradient(to bottom, #0077cc, #0055aa);
+}
+
+/* ========================================== */
+/* 🌍         TERMS PAGE
+/* ========================================== */
+body[data-page="terms"] {
+    font-family: "Georgia", sans-serif;
+    text-align: center;
+    color: #333333;
+    background-color: #f4f4f4;
+}
+
+/* NAVIGATION BAR */
+body[data-page="terms"] #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Restored proper centering */
+    padding: 5px 10px;
+    background: linear-gradient(to right, #003366, #0055aa);
+    color: white;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+body[data-page="terms"] footer {
+    background: linear-gradient(to right, #003366, #0055aa); /* Dark Blue */
+}
+
+body[data-page="terms"] #navbar h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    letter-spacing: 0.40rem;
+}
+
+body[data-page="terms"] #nav-links {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+}
+
+body[data-page="terms"] .tab-button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none !important;
+}
+
+body[data-page="terms"] #terms-container {
+    max-width: 1000px;
+    margin: 115px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+body[data-page="terms"] .terms-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ========================================== */
+/* 🌍         PRIVACY PAGE
+/* ========================================== */
+body[data-page="privacy"] {
+    font-family: "Georgia", sans-serif;
+    text-align: center;
+    color: #333333;
+    background-color: #f4f4f4;
+}
+
+/* NAVIGATION BAR */
+body[data-page="privacy"] #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Restored proper centering */
+    padding: 5px 10px;
+    background: linear-gradient(to right, #003366, #0055aa);
+    color: white;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+body[data-page="privacy"] footer {
+    background: linear-gradient(to right, #003366, #0055aa); /* Dark Blue */
+}
+
+body[data-page="privacy"] #navbar h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    letter-spacing: 0.40rem;
+}
+
+body[data-page="privacy"] #nav-links {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+}
+
+body[data-page="privacy"] .tab-button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none !important;
+}
+
+body[data-page="privacy"] #privacy-container {
+    max-width: 1000px;
+    margin: 115px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-top: 115px;
+}
+
+body[data-page="privacy"] .privacy-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ✅ Default (Desktop) */
+body[data-page] #menu-toggle, #mobile-menu {
+    display: none;
+}
+
+/* ========================================== */
+/* 🌍       @MEDIA SECTION
+/* ========================================== */
+/* ✅ Fully Responsive Styles */
+@media only screen and (max-width: 1000px) {
+    body[data-page="jokes"] #joke-display {
+        font-size: clamp(18px, 4.5vw, 30px); /* Auto-adjust font */
+        text-align: center;
+        padding: 10px;
+        line-height: 1.4;
+        width: clamp(80%, 90vw, 100%);
+        margin: 0px auto;
+        padding-top: 10%;
+        
+    }
+
+    body[data-page="trivia"] #trivia-display,
+    body[data-page="fun-facts"] #fun-facts-display {
+        font-size: clamp(18px, 4.5vw, 30px); /* Auto-adjust font */
+        text-align: center;
+        padding: 10px;
+        line-height: 1.4;
+        width: clamp(80%, 90vw, 100%);
+        margin: 0px auto;
+        padding-top: 20%;
+        
+    }
+
+/* ============ 🎭 JOKES PAGE (HEADERS) ============ */
+    body[data-page="jokes"] h1 {
+        font-size: clamp(24px, 5vw, 32px);
+        text-align: center;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    body[data-page="fun-facts"] h1,
+    body[data-page="trivia"] h1 {
+        font-size: clamp(20px, 5vw, 32px);
+        text-align: center;
+        margin-top: 10px;
+    }
+
+/* ✅ JOKE GENERATOR BUTTON */
+    body[data-page="jokes"] #joke-button {
+        width: clamp(200px, 50%, 350px);
+        font-size: clamp(14px, 3vw, 16px);
+        padding: 10px;
+        display: block;
+        margin: 0 auto;
+        max-width: 350px;
+    }
+
+    /* ✅ JOKES CATEGORY DROPDOWN */
+    body[data-page="jokes"] #dropdown-container {
+        width: clamp(200px, 50%, 350px)
+
+       }
+
+    body[data-page="jokes"] #button-dropdown-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    body[data-page="jokes"] #category-label {
+        font-size: clamp(12px, 3.5vw, 28px);
+        font-weight: bold;
+        padding-top: 5px;
+        white-space: normal;
+        max-width: 40%;
+    }
+
+    body[data-page="jokes"] #joke-category {
+        font-size: clamp(12px, 2vw, 14px);
+        min-width: 150px; /* Prevents shrinking */
+        max-width: 350px; /* Matches joke button */
+        width: 100%; /* Ensures full expansion inside container */
+        align-self: center;
+        padding: 10px;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        white-space: nowrap; /* Prevents text wrapping */
+        overflow: visible; /* Prevents text cutoff */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+/* ✅ FUN FACTS & TRIVIA SECTION */
+    body[data-page="fun-facts"] #fun-facts-section,
+    body[data-page="trivia"] #trivia-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        
+    }
+
+/* ✅ PREVIOUS/NEXT JOKE NAVIGATION */
+    body[data-page="jokes"] #previous-joke-button,
+    body[data-page="jokes"] #next-joke-button {
+        width: clamp(150px, 40%, 170px);
+        font-size: clamp(10px, 2.5vw, 15px);
+        padding: 6px;
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    body[data-page="trivia"] button {
+        font-family: "Georgia", sans-serif;
+        font-weight: normal;
+        border: 2px solid #999;
+        border-radius: 8px;
+        background: linear-gradient(to bottom, #ffffff, #d0d0d0);
+        color: #333333;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        margin-top: 50px;
+        font-size: clamp(16px, 5vw, 30px);
+        
+    }
+
+/* ✅ FUN FACTS & TRIVIA BUTTONS */
+    body[data-page="fun-facts"] #fun-facts-button,
+    body[data-page="trivia"] #trivia-button {
+        font-size: clamp(16px, 5vw, 30px);
+        padding: 15px 30px;
+        margin-bottom: 20px;
+        width: clamp(200px, 50%, 250px);
+    }
+    body[data-page="trivia"] button, a,
+    body[data-page="fun-facts"] button, a {
+        -webkit-tap-highlight-color: transparent; /* Removes default tap highlight */
+    -webkit-user-select: none; /* Prevents text selection */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+    
+    button:focus, button:active {
+        background-color: inherit !important; 
+        color: inherit !important;
+        box-shadow: none !important;
+        outline: none;
+    }    
+
+    body[data-page="fun-facts"] #prev-fun-facts, 
+    body[data-page="fun-facts"] #next-fun-facts,
+    body[data-page="trivia"] #prev-trivia, 
+    body[data-page="trivia"] #next-trivia {
+        font-size: clamp(10px, 3.5vw, 13px);
+        padding: 5px 15px;
+        width: clamp(150px, 40%, 170px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ============ 📖 HOW TO USE SECTION (ALL PAGES) ============ */
+    body[data-page="jokes"] #how-to-use-container,
+    body[data-page="trivia"] #how-to-use-container,
+    body[data-page="fun-facts"] #how-to-use-container {
+        width: 60%;
+        max-width: 90vw;
+        margin: 50px auto;
+       text-align: center;
+       font-size: clamp(14px, 3.5vw, 26px);
+    }
+    
+    body[data-page="jokes"] #how-to-use-container h3, 
+    body[data-page="trivia"] #how-to-use-container h3,
+    body[data-page="fun-facts"] #how-to-use-container h3 {
+        font-size: clamp(14px, 3.5vw, 26px);
+    }
+    
+    body[data-page="jokes"] #how-to-use-container p,
+    body[data-page="trivia"] #how-to-use-container p,
+    body[data-page="fun-facts"] #how-to-use-container p {
+    font-size: (14px, 3.5vw, 26px);
+    }
+        
+    body[data-page="jokes"] #how-to-use-container ul li,
+    body[data-page="trivia"] #how-to-use-container ul li,
+    body[data-page="fun-facts"] #how-to-use-container ul li {
+    font-size: (14px, 3.5vw, 26px);
+     }
+
+     body[data-page="jokes"] #how-to-use-container ul,
+     body[data-page="trivia"] #how-to-use-container ul,
+     body[data-page="fun-facts"] #how-to-use-container ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        margin-top: 10px;
+        font-size: (14px, 3.5vw, 26px);
+    }
+
+    body[data-page="jokes"] #how-to-use-container ul li::before,
+    body[data-page="trivia"] #how-to-use-container ul li::before,
+    body[data-page="fun-facts"] #how-to-use-container ul li::before {
+        content: "";
+        font-weight: bold;
+        margin-right: 8px;
+        text-align: center;
+        font-size: clamp(14px, 3.5vw, 26px);
+    }
+    
+    
+
+    /* ✅ Adjust Title */
+    body[data-page] #how-to-use-title {
+        font-size: clamp(14px, 3.5vw, 28px);
+        padding-bottom: 5px;
+    }
+
+    /* ✅ Adjust Horizontal Line */
+    body[data-page] #how-to-use-line {
+        height: 1px;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+
+    /* ✅ Adjust List Items */
+    body[data-page] #how-to-use-list {
+        font-size: clamp(12px, 3.5vw, 26px);
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    #nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #nav-links a {
+        padding: 8px 12px; /* Adjust padding for spacing */
+        font-size: 14px; /* Slightly smaller text */
+    }
+
+/* ✅ Responsive Navigation Bar (Mobile + Tablets) */
+    body[data-page="jokes"] #navbar,
+    body[data-page="trivia"] #navbar,
+    body[data-page="fun-facts"] #navbar,
+    body[data-page="contact"] #navbar,
+    body[data-page="terms"] #navbar,
+    body[data-page="privacy"] #navbar {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 15px;
+        height: 60px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+    
+    /* ✅ Ensure Menu Button is Visible */
+    body[data-page] #menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: clamp(20px, 3vw, 30px); /* Responsive width */
+        height: clamp(18px, 2.5vw, 24px); /* Responsive height */
+        cursor: pointer;
+        position: absolute;
+        right: min(20%, clamp(20px, 3vw, 30px)); /* Dynamically adjusts spacing */
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001; /* Ensures it stays above other elements */
+    }    
+
+    /* ✅ Navbar Title Adjustments */
+    body[data-page] #navbar h2 {
+        font-size: clamp(10px, 4vw, 15px);
+        text-align: left;
+        margin: 0;
+        width: fit-content;
+        letter-spacing: 0.20rem;
+    }
+        
+    /* ✅ Hide Regular Navigation Tabs */
+    body[data-page] #nav-links {
+        display: none;
+    } 
+
+    /* ✅ Menu Toggle Lines */
+    #menu-toggle .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 1px;
+    }
+
+    /* ✅ Mobile Dropdown Menu */
+    body[data-page] #mobile-menu {
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 60px;
+        background: white;
+        border: 1px solid #ccc;
+        width: clamp(140px, 20vw, 180px);
+        text-align: center;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 1100;
+    }
+
+    body[data-page] #mobile-menu a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        border-bottom: 1px solid #ddd;
+    }
+
+    body[data-page] #mobile-menu a:hover {
+        background: #f0f0f0;
+    }
+
+    /* ✅ Prevent Scrolling Issues */
+    html, body {
+        overflow-y: auto !important;
+        height: 100% !important;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        overflow-x: hidden;
+        width: 100vw;
+        -webkit-text-size-adjust: none;
+        min-height: 100vh;
+    }
+
+    /* ============ 🦶 FOOTER (ALL PAGES) ============ */
+    body[data-page="jokes"] footer,
+    body[data-page="trivia"] footer,
+    body[data-page="fun-facts"] footer,
+    body[data-page="contact"] footer,
+    body[data-page="terms"] footer,
+    body[data-page="privacy"] footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        font-size: clamp(8px, 2.5vw, 14px);
+        padding: 0;
+        width: 100vw;
+        text-align: center;
+        position: relative;
+        margin: 0;
+        left: 0;
+       margin-top: auto;
+       bottom: 0
+    }   
+
+    body, .wrapper, main {
+        width: 100vw !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center;
+    }    
+    
+
+    /* ✅ Footer Text */
+    body[data-page] footer p {
+        font-size: clamp(9px, 3.5vw, 18px);
+        padding: 0 0px;
+    }
+
+    /* ✅ Footer Links */
+    body[data-page] footer a {
+        font-size: clamp(9px, 3.5vw, 18px);
+        padding: 0 0px;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+        margin-bottom: 5px;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+    #content { /* Wrap everything except the footer */
+        flex-grow: 1;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+#page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+
+    /* CONTACT FORM CONTAINER */
+body[data-page="contact"] #contact-container {
+   text-align: left;
+   margin-top: 30%;
+   margin-bottom: 30%;
+   width: 80%;
+    max-width: 90vw;
+}
+}
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+    /* Ensure the navbar title doesn't overlap */
+    body[data-page] #navbar h2 {
+        font-size: clamp(14px, 3vw, 40px); /* Adjust dynamically */
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Scale navigation tabs so they fit */
+    #nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 90%; /* Prevent tabs from stretching too wide */
+    }
+
+    #nav-links a {
+        font-size: clamp(12px, 2.5vw, 18px); /* Scale text */
+        padding: 1px; /* Keep spacing consistent */
+    }
+
+    body {
+        font-size: clamp(16px, 3vw, 20px); /* Increase base font size */
+        line-height: 1.6; /* Improve readability */
+    }
+    
+}
+   
+
+
+
+
+
+
+
+
+
+
+
+

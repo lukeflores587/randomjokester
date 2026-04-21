@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /jokes.html
+Allow: /trivia.html
+Allow: /fun-facts.html
+Disallow: /admin
+Sitemap: https://randomjokester.com/sitemap.xml

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Get in Touch | Random Jokester</title>
+    <meta name="description" content="Have a question or suggestion? Contact Random Jokester for support, joke submissions, or general inquiries using our secure contact form." />
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file --> 
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Random Jokester",
+          "url": "https://randomjokester.com/contact.html",
+          "description": "Reach out to us at Random Jokester for support, joke submissions, or general inquiries.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": ["English"]
+          }
+        }
+        </script>  
+</head>
+<body data-page="contact">
+   <!-- Navigation Bar -->
+   <nav id="navbar">
+    <div id="logo-container">
+        <h2>Random Jokester</h2>
+    </div>
+    <div id="nav-links">
+        <a href="index.html" class="tab-button">Jokes</a>
+        <a href="trivia.html" class="tab-button">Trivia</a>
+        <a href="fun-facts.html" class="tab-button">Fun Facts</a>
+    </div>
+    <div id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>       
+</nav>
+
+<!-- ✅ Mobile Dropdown Menu (HIDDEN BY DEFAULT) -->
+<div id="mobile-menu">
+    <a href="index.html">Jokes</a>
+    <a href="trivia.html">Trivia</a>
+    <a href="fun-facts.html">Fun Facts</a>
+</div>
+
+    </header>
+
+    <div id="contact-container">
+        <h1 class="contact-title">Contact Us</h1>
+        <p>Have a question or feedback? Fill out the form below to get in touch!</p>
+    
+        <form action="https://formspree.io/f/mqaegydv" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="_replyto" required>
+    
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <!-- reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6LdrZNoqAAAAANnWz6C_T3zWr9rdg9GHIwEgiyD0"></div>
+    
+            <button type="submit">Send</button>
+        </form>
+    </div> 
+
+    <footer>
+        <p>
+            <a href="contact.html">Contact Us</a> | 
+        <a href="terms.html">Terms of Use</a> | 
+        <a href="privacy.html">Privacy</a> | 
+        </p>
+        <p class="footer-brand">© 2025 Random Jokester.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+</body>
+</html>
